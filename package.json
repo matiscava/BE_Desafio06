@@ -1,0 +1,19 @@
+{
+  "name": "desafio6",
+  "version": "1.0.1",
+  "description": "Servidor con express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js"
+  },
+  "author": "Matias Scavarelli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

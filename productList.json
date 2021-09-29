@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "medialuna",
+    "price": 120,
+    "thumbnail": "https://image.shutterstock.com/image-photo/croissant-isolated-on-white-260nw-136153424.jpg"
+  },
+  {
+    "id": 2,
+    "title": "milanesa",
+    "price": 420,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Weekend_in_Buenos_Aires.jpg/1200px-Weekend_in_Buenos_Aires.jpg"
+  },
+  {
+    "id": 3,
+    "title": "zapatilla",
+    "price": 800,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_771725-MLA25491409448_042017-O.jpg"
+  }
+]
