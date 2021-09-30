@@ -8,9 +8,9 @@ async function cargarTxt(){
     try {
         const productos = await new ArchivoFS('./producto.txt')
         // console.log(productos)
-        productos.save('Iphone 11',45200,'https://www.casanissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/1/1/11_negrooo_9.jpg','./producto.txt')
-        productos.save('Game Boy Color',11231,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Nintendo-Game-Boy-Color-FL.jpg/300px-Nintendo-Game-Boy-Color-FL.jpg','./producto.txt')
-        productos.save('Gallina',2015436,'https://pbs.twimg.com/media/EKaEW7AW4AEHg-q?format=jpg&name=small','./producto.txt')
+        productos.save('Iphone 11',45200,'https://www.casanissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/1/1/11_negrooo_9.jpg')
+        productos.save('Game Boy Color',11231,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Nintendo-Game-Boy-Color-FL.jpg/300px-Nintendo-Game-Boy-Color-FL.jpg')
+        productos.save('Gallina',2015436,'https://pbs.twimg.com/media/EKaEW7AW4AEHg-q?format=jpg&name=small')
         leerJson()
     }
     catch(error){
@@ -32,7 +32,6 @@ async function leerJson () {
             });
             server.get('/productoRandom', (solicitud, respuesta, siguiente)=> {
                 const maximo = listado.length;
-                console.log('maximo: ',maximo)
                 idRandom = Math.floor(Math.random()*(maximo))+1;
 
 

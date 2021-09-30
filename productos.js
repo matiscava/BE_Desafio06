@@ -8,7 +8,7 @@ module.exports = class ArchivoFS {
         const objeto = JSON.parse(data);
         return objeto
     }
-    save(titulo,precio,url,archivo){
+    save(titulo,precio,url){
         const fs = require('fs');
         const data = fs.readFileSync(this.archivo);
         const objeto = JSON.parse(data);
@@ -34,20 +34,20 @@ module.exports = class ArchivoFS {
                 }
             }
         }
-        console.log('agregarData',agregarData)
+        // console.log('agregarData',agregarData)
         objeto.push(agregarData);
         const dataToJSON = JSON.stringify(objeto,null,2);
-        fs.writeFileSync(archivo, dataToJSON);
-        console.log('data:',objeto);
+        fs.writeFileSync(this.archivo, dataToJSON);
+        // console.log('data:',objeto);
         }
     deleteById (idNum) {
         const fs = require('fs');
         const data = fs.readFileSync(this.archivo);
         const objeto = JSON.parse(data);
         const objetoFiltrado = objeto.filter(obj => obj.id !== idNum);
-        console.log('objeto filtrado:',objetoFiltrado);
+        // console.log('objeto filtrado:',objetoFiltrado);
         const dataToJSON = JSON.stringify(objetoFiltrado,null,2);
-        fs.writeFileSync('./productList.json', dataToJSON);
+        fs.writeFileSync(this.archivo, dataToJSON);
     }
     getById (idNum) {
         const fs = require('fs');
@@ -55,12 +55,12 @@ module.exports = class ArchivoFS {
         const objeto = JSON.parse(data);
         const objetoFiltrado = objeto.filter(obj => obj.id === idNum);
         if (objetoFiltrado[0]===undefined) {
-         console.log('objeto filtrado:',null);
+        //  console.log('objeto filtrado:',null);
          return null
         }else{
-            console.log('objeto filtrado:',objetoFiltrado[0]);
+            // console.log('objeto filtrado:',objetoFiltrado[0]);
+            return objetoFiltrado[0]       
         } 
-        return objetoFiltrado[0]       
     }
     
     deleteAll () {
@@ -69,6 +69,6 @@ module.exports = class ArchivoFS {
         // const objeto = JSON.parse(data);
         const obejtoVacio = [];
         const dataToJSON = JSON.stringify(obejtoVacio,null,2);
-        fs.writeFileSync('./productList.json', dataToJSON);
+        fs.writeFileSync(this.archivo, dataToJSON);
     }
 }
